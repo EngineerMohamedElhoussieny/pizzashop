@@ -9,7 +9,7 @@ export const FoodGrid=styled.div`
 
 export const FoodLabel=styled.div`
   position:absolute;
-  background-color:rgba(255,255,255,.8);
+  backgrou nd-color:rgba(255,255,255,.8);
   padding:5px;
 `
 

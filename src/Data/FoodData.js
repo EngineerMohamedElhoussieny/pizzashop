@@ -1,13 +1,22 @@
-export const foodsItems =[
+export function formatPrice(price) {
+    return price.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD"
+    });
+  }
+  
+  export const foodItems = [
     {
-        name:'Cheese Pizza',
-        img:'/img/pizza.png',
-        section: "Pizza"
+      name: "Cheese Pizza",
+      img: "/img/pizza.png",
+      section: "Pizza",
+      price: 1
     },
     {
-        name:'Pepperoni Pizza',
-        img:'/img/pizza2.jpeg',
-        section: "Pizza"
+      name: "Pepperoni Pizza",
+      img: "/img/pizza2.jpeg",
+      section: "Pizza",
+      price: 1.5
     },
     {
       name: "Chicken Pizza",
@@ -39,12 +48,16 @@ export const foodsItems =[
       name: "Fries",
       section: "Sides",
       price: 1
-    } 
-];
-
-export const foods=foodsItems.reduce((res,food)=>{
-    if(!res[food.section]){
-        res[food.section]=[];
+    }
+  ];
+  
+  export const foods = foodItems.reduce((res, food) => {
+    if (!res[food.section]) {
+      res[food.section] = [];
     }
     res[food.section].push(food);
-},{});
+    return res;
+  }, {});
+  
+  //  © created by react.school
+  
