@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {DialogContent,DialogFooter,ConfirmButton} from '../FoodDialog/FoodDialog'
 
 const OrderStyled=styled.div`
  position:fixed;
@@ -10,7 +11,24 @@ const OrderStyled=styled.div`
  height:calc(100% - 48px);
  z-index:10;
  box-shadow:4px 0px 5px 4px grey;
+ dispaly:flex;
+ flex-direction:column;
 `
+
+const OrderContent=styled(DialogContent)`
+  padding:20px;
+  height: 87%;
+  `
+
 export function Order(){
-    return <OrderStyled>The Order is Empty</OrderStyled>
+    return <OrderStyled>
+            <OrderContent>
+            Your Order is looking pretty epmty
+            </OrderContent>
+            <DialogFooter>
+                <ConfirmButton>
+                    Check out
+                </ConfirmButton>
+            </DialogFooter>
+    </OrderStyled>
 }
