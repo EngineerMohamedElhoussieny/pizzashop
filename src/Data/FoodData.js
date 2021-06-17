@@ -48,6 +48,12 @@ export function formatPrice(price) {
       name: "Fries",
       section: "Sides",
       price: 1
+    },
+    {
+      price: 1,
+      name: "Soda",
+      section: "Drinks",
+      choices: ["Coke", "Sprite", "Root Beer"]
     }
   ];
   
